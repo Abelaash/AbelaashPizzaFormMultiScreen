@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="125dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="13dp"
+        android:text="Pizza Order"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select toppings:"
+        android:textColor="#FA000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="118dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rad1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Small-9$" />
+
+        <RadioButton
+            android:id="@+id/rad2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium-10$" />
+
+        <RadioButton
+            android:id="@+id/rad3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large-11$"
+
+            tools:layout_editor_absoluteX="-189dp"
+            tools:layout_editor_absoluteY="319dp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkMeat"
+        android:layout_width="117dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginBottom="106dp"
+        android:text="Meat-2$"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <CheckBox
+        android:id="@+id/chkVeggie"
+        android:layout_width="117dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        android:text="Veggies-2$"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintEnd_toEndOf="@+id/chkCheese"
+        app:layout_constraintStart_toStartOf="@+id/chkCheese"
+        app:layout_constraintTop_toTopOf="@+id/txtAddress" />
+
+    <CheckBox
+        android:id="@+id/chkCheese"
+        android:layout_width="114dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="72dp"
+
+        android:layout_marginBottom="72dp"
+        android:text="Cheese-2$"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/chkMeat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chkMeat"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Yes"
+        android:textOff="@android:string/no"
+        android:textOn="@android:string/yes"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="9dp"
+        android:text="Deliver required?"
+        android:textColor="#FA000000"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="133dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="132dp"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDelivery"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDelivery"
+        android:layout_width="158dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtTotal"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.381" />
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="103dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnClick"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/chkCheese"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="127dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="81dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDelivery"
+        app:layout_constraintTop_toBottomOf="@+id/chkVeggie" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="325dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="77dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="88dp"
+
+        android:text="Select the size:"
+        android:textColor="#FA000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
